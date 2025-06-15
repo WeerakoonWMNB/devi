@@ -125,6 +125,72 @@
   font-size: 0.9rem;
 }
 
+.team-member {
+  background: #f9f9f9; /* Optional background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px; /* Set desired consistent height */
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#services2 .service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures all boxes stretch to the same height */
+  padding: 20px;
+  background: #f9f9f9; /* or your desired background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+#services2 .service-item h3 {
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+
+#services2 .service-item p {
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#services .service-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensures all boxes stretch to the same height */
+  padding: 20px;
+  background: #f9f9f9; /* or your desired background */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+#services .service-item h3 {
+  margin-top: 15px;
+  font-size: 1.25rem;
+}
+
+#services .service-item p {
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
   </style>
 </head>
 
@@ -147,7 +213,7 @@
             </div>
             <div class="our_offer col-lg-12 col-md-12 mt-4">
                     <div class="offer_text">
-                        <h4>Days to Concert 2025</h4>
+                        <h4>Days to තාල 2025</h4>
                         <div class="date_countdown">
                             <div id="timer">
                                 <div id="days" class="date"></div>
@@ -270,10 +336,11 @@
               $title = htmlspecialchars($title, ENT_QUOTES, 'UTF-8');
               $description = htmlspecialchars($description, ENT_QUOTES, 'UTF-8');
               $image = $row['image_link'];
+              $id = $row['id'];
 
         ?>
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="service-item position-relative">
               <div class="img">
                 <img src="<?php echo $image; ?>" class="img-fluid" alt="<?php echo $title; ?>">
               </div>
@@ -281,7 +348,7 @@
                 <div class="icon">
                   <i class="bi bi-activity"></i>
                 </div>
-                <a href="service-details.html" class="stretched-link">
+                <a href="news.php?id=<?php echo $id; ?>" class="stretched-link">
                   <h3 class="service-title" title="<?php echo $title; ?>">
                     <?php echo $title; ?>
                   </h3>
@@ -312,31 +379,38 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Features</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Principal’s Message</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/features-1.svg" class="img-fluid" alt="">
+        <div class="row gy-4  features-item">
+          <div class="col-md-5 d-flex" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/principal.jpg" class="img-fluid" alt="principal's image">
           </div>
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3> -->
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Devi Balika Vidyalaya, Colombo, has for decades been synonymous with academic excellence and moral integrity. As Principal, I regard it as both an honour and a responsibility to uphold this legacy while advancing a vision of education that is both comprehensive and future-oriented.
+            </p>  
+            <p class="fst-italic">
+            Our primary goal is to shape young women into intellectually adept and emotionally resilient individuals who can serve as ethical leaders and active contributors in society. To this end, we offer a broad-based education that integrates scholastic rigor with meaningful engagement in the arts, sciences, sports, and community service.
             </p>
-            <ul>
-              <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check"></i> <span>Ullam est qui quos consequatur eos accusamus.</span></li>
-            </ul>
+            <p class="fst-italic">
+            We are deeply committed to nurturing each student’s unique potential, guided by a culture of discipline, mutual respect, and continuous improvement. With the steadfast support of our teachers, parents, and alumni, Devi Balika will continue to produce well-rounded graduates who reflect the values and vision of this great institution.
+            </p>
+            <p class="fst-italic">
+            Mrs. H.B.N.D.Hapugoda <br>
+            (S.L.E.A.S.-I) <br>
+            Principal <br>
+            Devi Balika Vidyalaya
+
+            </p>
           </div>
         </div><!-- Features Item -->
 
-        <div class="row gy-4 align-items-center features-item">
+        <!-- <div class="row gy-4 align-items-center features-item">
           <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
             <img src="assets/img/features-2.svg" class="img-fluid" alt="">
           </div>
@@ -352,9 +426,9 @@
               culpa qui officia deserunt mollit anim id est laborum
             </p>
           </div>
-        </div><!-- Features Item -->
+        </div> -->
 
-        <div class="row gy-4 align-items-center features-item">
+        <!-- <div class="row gy-4 align-items-center features-item">
           <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
             <img src="assets/img/features-3.svg" class="img-fluid" alt="">
           </div>
@@ -367,9 +441,9 @@
               <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
             </ul>
           </div>
-        </div><!-- Features Item -->
+        </div> -->
 
-        <div class="row gy-4 align-items-center features-item">
+        <!-- <div class="row gy-4 align-items-center features-item">
           <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
             <img src="assets/img/features-4.svg" class="img-fluid" alt="">
           </div>
@@ -385,99 +459,459 @@
               culpa qui officia deserunt mollit anim id est laborum
             </p>
           </div>
-        </div><!-- Features Item -->
+        </div> -->
 
       </div>
 
     </section><!-- /Features Section -->
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>ACADEMIC</h2>
+        <p>Academic Structure</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+      <div class="row faq-item" data-aos="fade-up" data-aos-delay="100">
+        <ul>
+          <li><h4>Each grade from 6 to 11 is organized into five parallel classes, A, B, C, D and E. &nbsp;&nbsp;<a href="curriculum.php" target="_blank" rel="noopener noreferrer"><small>Curriculum >></small></a></h4> </li>
+          <li><h4>Advanced Level studies is structured into five subject streams. &nbsp;&nbsp;<a href="curriculum.php" target="_blank" rel="noopener noreferrer"><small>Curriculum >></small></a></h4> </li>
+        </ul>
+      </div>
+
+        <div class="row faq-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-5 d-flex">
+            <h4>1. Bio Science</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Organized into one English medium class and five Sinhala medium classes. 
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-5 d-flex">
+            <h4>2. Physical Science</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Organized into one English medium class and two Sinhala medium classes.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-5 d-flex">
+            <h4>3. Commerce</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Organized into one English medium class and two Sinhala medium classes.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-5 d-flex">
+            <h4>4. Arts</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Organized into one English medium class and two Sinhala medium classes.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+        <div class="row faq-item" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-5 d-flex">
+            <h4>5. Technology</h4>
+          </div>
+          <div class="col-lg-7">
+            <p>
+              Organized into one Engineering technology class and one Bio System technology class.
+            </p>
+          </div>
+        </div><!-- End F.A.Q Item-->
+
+      </div>
+
+    </section><!-- /Faq Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Co-Curricular <br> <i>Sports</i></h2>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up">
+            <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-activity"></i>
+                <i class="bi bi-dribbble"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Nesciunt Mete</h3>
+              <a href="#" class="stretched-link">
+                <h3>Basketball</h3>
               </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <p>Our basketball team has consistently excelled in inter-school competitions, showcasing teamwork and skill.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-broadcast"></i>
+                <i class="bi bi-cookie"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Eosle Commodi</h3>
+              <a href="#" class="stretched-link">
+                <h3>Netball</h3>
               </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <p>Our netball team is known for its agility and strategic gameplay, participating in various tournaments.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-easel"></i>
+                <i class="bi bi-slash-circle"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Ledo Markt</h3>
+              <a href="#" class="stretched-link">
+                <h3>Handball</h3>
               </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <p>Our handball team has a strong record in regional competitions, demonstrating skill and sportsmanship.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
+                <i class="bi bi-circle"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
+              <a href="#" class="stretched-link">
+                <h3>Table Tennis</h3>
               </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              <p>Our table tennis players are known for their quick reflexes and competitive spirit, excelling in local tournaments.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
+                <i class="bi bi-flower2"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Velit Doloremque</h3>
+              <a href="#" class="stretched-link">
+                <h3>Badminton</h3>
               </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              <p>Our badminton team has achieved remarkable success in inter-school championships, showcasing agility and precision.</p>
+            </div>
+        </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-bullseye"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Riffle Shooting</h3>
+              </a>
+              <p>Our rifle shooting team has consistently performed well in national competitions, demonstrating focus and precision.</p>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item position-relative">
               <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
+                <i class="bi bi-option"></i>
               </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Dolori Architecto</h3>
+              <a href="#" class="stretched-link">
+                <h3>Swimming</h3>
               </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="service-details.html" class="stretched-link"></a>
+              <p>Our swimming team has a strong tradition of excellence, with many swimmers competing at national levels.</p>
             </div>
           </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="700">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-person-arms-up"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Karate</h3>
+              </a>
+              <p>Our karate team has produced several champions in regional and national competitions, emphasizing discipline and respect.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="800">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-info-lg"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Chess</h3>
+              </a>
+              <p>Our chess team is known for its strategic prowess, competing in various inter-school and national tournaments.</p>
+            </div>  
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="900">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-circle-half"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Cricket</h3>
+              </a>
+              <p>Our cricket team has a rich history of success, with many players representing the school at national levels.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1000">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-person-walking"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Athletics</h3>
+              </a>
+              <p>Our athletics team has consistently excelled in track and field events, producing numerous champions.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Services Section -->
+    <section id="services2" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Co-Curricular <br> <i>Clubs and Societies</i></h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-book"></i></div>
+            <a href="#" class="stretched-link"><h3>English Literary Association</h3></a>
+            <p>Fostering a love for English literature through reading, writing, and discussion.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-book-half"></i></div>
+            <a href="#" class="stretched-link"><h3>Sinhala Literary Association</h3></a>
+            <p>Promoting Sinhala language and literature through cultural and literary events.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-globe"></i></div>
+            <a href="#" class="stretched-link"><h3>UNESCO Society</h3></a>
+            <p>Upholding UNESCO values of education, science, and culture.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-cpu"></i></div>
+            <a href="#" class="stretched-link"><h3>ICT Society</h3></a>
+            <p>Encouraging digital literacy and tech innovation among students.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-tree"></i></div>
+            <a href="#" class="stretched-link"><h3>Environmental Society</h3></a>
+            <p>Promoting environmental awareness and sustainable practices.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-people"></i></div>
+            <a href="#" class="stretched-link"><h3>Model United Nations</h3></a>
+            <p>Simulating UN conferences to develop diplomacy and leadership skills.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="700">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-moon-stars"></i></div>
+            <a href="#" class="stretched-link"><h3>Astronomical Society</h3></a>
+            <p>Exploring the wonders of the universe through astronomy.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="800">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-question-circle"></i></div>
+            <a href="#" class="stretched-link"><h3>Quiz Club</h3></a>
+            <p>Sharpening minds through trivia and knowledge competitions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="900">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-theater"></i></div>
+            <a href="#" class="stretched-link"><h3>English Drama Circle</h3></a>
+            <p>Expressing creativity through performance and theatrical arts.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1000">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-chat-left-text"></i></div>
+            <a href="#" class="stretched-link"><h3>English Debating Club</h3></a>
+            <p>Developing argumentation and public speaking skills.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1100">
+          <div class="service-item position-relative">
+            <div class="icon"><i class="bi bi-lightbulb"></i></div>
+            <a href="#" class="stretched-link"><h3>Inventors’ Club</h3></a>
+            <p>Encouraging creativity and invention through hands-on projects.</p>
+          </div>
+        </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-person-hearts"></i></div>
+              <a href="#" class="stretched-link"><h3>Girl Guides</h3></a>
+              <p>Empowering young girls through service, skills, and leadership.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-shield"></i></div>
+              <a href="#" class="stretched-link"><h3>Cadet Platoon</h3></a>
+              <p>Instilling discipline, patriotism, and leadership through training.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-music-note-list"></i></div>
+              <a href="#" class="stretched-link"><h3>Junior/Senior Eastern Band</h3></a>
+              <p>Celebrating tradition through rhythmic performances.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1500">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-music-note-beamed"></i></div>
+              <a href="#" class="stretched-link"><h3>Junior/Senior Western Band</h3></a>
+              <p>Showcasing musical talent through contemporary styles.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1600">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-emoji-smile"></i></div>
+              <a href="#" class="stretched-link"><h3>Buddhist Society</h3></a>
+              <p>Spreading Buddhist values and organizing religious activities.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1700">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-award"></i></div>
+              <a href="#" class="stretched-link"><h3>Youth Awards Unit</h3></a>
+              <p>Encouraging youth development through structured awards programs.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1800">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-graph-up"></i></div>
+              <a href="#" class="stretched-link"><h3>Commerce Society</h3></a>
+              <p>Fostering business acumen and economic awareness.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="1900">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-brush"></i></div>
+              <a href="#" class="stretched-link"><h3>Art Society</h3></a>
+              <p>Nurturing creativity through visual arts and expression.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2000">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-controller"></i></div>
+              <a href="#" class="stretched-link"><h3>Chess Club</h3></a>
+              <p>Enhancing strategic thinking and concentration through chess.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-translate"></i></div>
+              <a href="#" class="stretched-link"><h3>Language Society</h3></a>
+              <p>Celebrating linguistic diversity and learning new languages.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-camera"></i></div>
+              <a href="#" class="stretched-link"><h3>Photographic Society</h3></a>
+              <p>Capturing moments and exploring photography techniques.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2300">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-broadcast"></i></div>
+              <a href="#" class="stretched-link"><h3>Media Unit</h3></a>
+              <p>Managing school media, broadcasting, and journalism activities.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-music-note"></i></div>
+              <a href="#" class="stretched-link"><h3>Eastern Music Unit</h3></a>
+              <p>Promoting traditional music and cultural heritage.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2500">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-tools"></i></div>
+              <a href="#" class="stretched-link"><h3>Technology Society</h3></a>
+              <p>Exploring advancements in modern technology through hands-on activities.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5" data-aos="fade-up" data-aos-delay="2600">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-check-circle"></i></div>
+              <a href="#" class="stretched-link"><h3>Quality Circle</h3></a>
+              <p>Improving organizational efficiency and team collaboration.</p>
+            </div>
+          </div>
+
 
         </div>
 
@@ -491,7 +925,8 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- school portfolio description -->
+        <p>Explore our diverse portfolio showcasing the achievements and projects of Devi Balika Vidyalaya.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -500,102 +935,152 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+            <li data-filter=".filter-app">School</li>
+            <li data-filter=".filter-product">Academic</li>
+            <li data-filter=".filter-branding">Co-curricular</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/8.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <img src="assets/img/portfolio/co/4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/co/4.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/2.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <img src="assets/img/portfolio/academic/3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/academic/3.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/7.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <img src="assets/img/portfolio/co/6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/co/6.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/10.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/10.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <img src="assets/img/portfolio/academic/1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/academic/1.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/4.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <img src="assets/img/portfolio/co/7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/co/7.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/3.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <img src="assets/img/portfolio/academic/2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/academic/2.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/6.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <img src="assets/img/portfolio/co/2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/co/2.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/1.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <img src="assets/img/portfolio/academic/4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/academic/4.jpg" title="" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/9.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <img src="assets/img/portfolio/school/5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/school/5.jpg" title="" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <img src="assets/img/portfolio/co/1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/co/1.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <img src="assets/img/portfolio/co/5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <a href="assets/img/portfolio/co/5.jpg" title="" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div>
 
           </div><!-- End Portfolio Container -->
 
@@ -605,13 +1090,76 @@
 
     </section><!-- /Portfolio Section -->
 
+    <!-- Features Section -->
+    <section id="history" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>History</h2>
+        <p>Devi Balika Vidyalaya, Colombo, has a rich history of academic excellence and cultural significance. </p>  
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+         <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/img/h1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+            <h3>News Paper Articles</h3>
+            <p class="fst-italic">
+              Government Girls’ College, Castle Street, Colombo 08.
+            </p>
+            <p>
+              “Here was a school with no impressive buildings and hardly a very favourable location (between the hospital and cemetery between life and death). No imposing pillars and swing doors indicated the principal’s office. But to me here was a school with the ‘Heart’ of a home - a school where each one knew the other, where all were friends.”
+              <br> <b>-	D.R.L. Samararatne</b>
+            </p>
+          </div>
+        </div> 
+
+         <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/h2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7" data-aos="fade-up">
+            <h3>First to enter the university</h3>
+            <p>
+              “CREDITABLE FEAT: The Director of Education Mr. T.D. Jayasuriya, made a special visit to Castle Street Girls’ School, Borella yesterday to congratulate the 5 girls who were successful in the University Entrance Examination held this year. The school which was opened only last year by the educational department was constructed with pre-fabricated material and caters only to students interested in Higher Education in the field of Mathematics and Science. 
+              Eight girls were sent up for the examination and these five were successful.
+
+            </p>
+          </div>
+        </div> 
+
+        <!-- <div class="row gy-4 align-items-center features-item">
+          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
+            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
+            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <p>
+              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum
+            </p>
+          </div>
+        </div> -->
+
+      </div>
+
+    </section><!-- /Features Section -->
+
     <!-- Team Section -->
     <section id="team" class="team section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Past Principals</h2>
+        <p>Meet the esteemed past principals of Devi Balika Vidyalaya, who have shaped the school's legacy and guided generations of students.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -620,90 +1168,91 @@
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Dr. (Mrs.) Wimala De Silva</h4>
+                <span>1953 to 1966</span>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
+                <h4>Mrs. Kalyani De Zoysa</h4>
+                <span>1967 to 1985</span>
               </div>
             </div>
           </div><!-- End Team Member -->
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
+                <h4>Mrs. Mercy Edussuriya</h4>
+                <span>1986</span>
               </div>
             </div>
           </div><!-- End Team Member -->
-
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
               <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
+                <h4>Mrs. Soma Subasinghe</h4>
+                <span>1987</span>
               </div>
             </div>
           </div><!-- End Team Member -->
-
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+            <div class="team-member">
+              <div class="member-info">
+                <h4>Mrs. Jayanthi Pinnagoda</h4>
+                <span>1988 to 1995</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+            <div class="team-member">
+              <div class="member-info">
+                <h4>Mrs. Kalyani Lakshman</h4>
+                <span>1995 to 2004</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="700">
+            <div class="team-member">
+              <div class="member-info">
+                <h4>Mrs. Ranuka Malalasekara</h4>
+                <span>2004 to 2008</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="800">
+            <div class="team-member">
+              <div class="member-info">
+                <h4>Mrs. W.D.P.K. Samarasinghe</h4>
+                <span>2009 to 2023</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="900">
+            <div class="team-member">
+              <div class="member-info">
+                <h4>Ms. Subhashini Dematagoda</h4>
+                <span>2023 to 2024</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
         </div>
 
       </div>
 
     </section><!-- /Team Section -->
 
-    <!-- Pricing Section -->
+    <!-- Pricing Section
     <section id="pricing" class="pricing section light-background">
 
-      <!-- Section Title -->
+      
       <div class="container section-title" data-aos="fade-up">
         <h2>Pricing</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
 
@@ -722,7 +1271,7 @@
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
-          </div><!-- End Pricing Item -->
+          </div>
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="pricing-item featured">
@@ -737,7 +1286,7 @@
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
-          </div><!-- End Pricing Item -->
+          </div>
 
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="pricing-item">
@@ -752,88 +1301,16 @@
               </ul>
               <a href="#" class="buy-btn">Buy Now</a>
             </div>
-          </div><!-- End Pricing Item -->
+          </div>
 
         </div>
 
       </div>
 
-    </section><!-- /Pricing Section -->
+    </section>
+     /Pricing Section -->
 
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row faq-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-5 d-flex">
-            <i class="bi bi-question-circle"></i>
-            <h4>Non consectetur a erat nam at lectus urna duis?</h4>
-          </div>
-          <div class="col-lg-7">
-            <p>
-              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-        <div class="row faq-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-5 d-flex">
-            <i class="bi bi-question-circle"></i>
-            <h4>Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?</h4>
-          </div>
-          <div class="col-lg-7">
-            <p>
-              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-        <div class="row faq-item" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-5 d-flex">
-            <i class="bi bi-question-circle"></i>
-            <h4>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?</h4>
-          </div>
-          <div class="col-lg-7">
-            <p>
-              Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-        <div class="row faq-item" data-aos="fade-up" data-aos-delay="400">
-          <div class="col-lg-5 d-flex">
-            <i class="bi bi-question-circle"></i>
-            <h4>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h4>
-          </div>
-          <div class="col-lg-7">
-            <p>
-              Aperiam itaque sit optio et deleniti eos nihil quidem cumque. Voluptas dolorum accusantium sunt sit enim. Provident consequuntur quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda soluta sunt pariatur error doloribus fuga.
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-        <div class="row faq-item" data-aos="fade-up" data-aos-delay="500">
-          <div class="col-lg-5 d-flex">
-            <i class="bi bi-question-circle"></i>
-            <h4>Tempus quam pellentesque nec nam aliquam sem et tortor consequat?</h4>
-          </div>
-          <div class="col-lg-7">
-            <p>
-              Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-            </p>
-          </div>
-        </div><!-- End F.A.Q Item-->
-
-      </div>
-
-    </section><!-- /Faq Section -->
+    
 
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
@@ -841,7 +1318,9 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <!-- school contact details description -->
+        <p>Feel free to reach out to us for any inquiries or information regarding our school, clubs, and activities.</p>
+        
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -854,15 +1333,15 @@
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Devi balika vidyalaya, Colombo 08.</p>
                 </div>
               </div><!-- End Info Item -->
 
               <div class="col-md-6">
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
                   <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <h3>Call/Fax Us</h3>
+                  <p>0112691857</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -870,7 +1349,7 @@
                 <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <p>devibalika.cmb8@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -878,36 +1357,14 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
+            <!-- include google map iframe -->
+            <div class="mapouter" data-aos="fade-up" data-aos-delay="500">
+              <div class="gmap_canvas">
+                <iframe width="100%" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Devi%20Balika%20Vidyalaya%20Colombo%2008&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
               </div>
-            </form>
-          </div><!-- End Contact Form -->
+              <style>.mapouter{position:relative;text-align:right;height:400px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}</style>
+            </div>
+          </div>
 
         </div>
 
@@ -917,29 +1374,9 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
-    <div class="container">
-      <h3 class="sitename">Bocor</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        <span>Copyright</span> <strong class="px-1 sitename">Bocor</strong> <span>All Rights Reserved</span>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-      </div>
-    </div>
-  </footer>
+ <!-- include footer -->
+    <?php include 'footer.php'; ?>
+    <!-- End Footer -->
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
