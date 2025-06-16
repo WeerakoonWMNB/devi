@@ -1091,13 +1091,12 @@
     </section><!-- /Portfolio Section -->
 
     <!-- Features Section -->
-    <section id="history" class="features section">
+    <!-- <section id="history" class="features section">
 
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>History</h2>
         <p>Devi Balika Vidyalaya, Colombo, has a rich history of academic excellence and cultural significance. </p>  
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
 
@@ -1105,7 +1104,7 @@
           <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
             <img src="assets/img/h1.jpg" class="img-fluid" alt="">
           </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="100">
             <h3>News Paper Articles</h3>
             <p class="fst-italic">
               Government Girls’ College, Castle Street, Colombo 08.
@@ -1118,7 +1117,7 @@
         </div> 
 
          <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
+          <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
             <img src="assets/img/h2.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-md-7" data-aos="fade-up">
@@ -1131,27 +1130,10 @@
           </div>
         </div> 
 
-        <!-- <div class="row gy-4 align-items-center features-item">
-          <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-            <img src="assets/img/features-4.svg" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-            <h3>Quas et necessitatibus eaque impedit ipsum animi consequatur incidunt in</h3>
-            <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-        </div> -->
-
       </div>
 
-    </section><!-- /Features Section -->
+    </section> -->
+    <!-- /Features Section -->
 
     <!-- Team Section -->
     <section id="team" class="team section">

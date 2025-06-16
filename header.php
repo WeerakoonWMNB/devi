@@ -29,7 +29,7 @@
             </ul>
           </li>
           <li><a href="index.php#portfolio">Portfolio</a></li>
-          <li><a href="index.php#history">History</a></li>
+          <li><a href="history.php">History</a></li>
           
           <li><a href="#contact">Contact</a></li>
         </ul>
