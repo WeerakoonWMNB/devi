@@ -38,7 +38,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background">
+    <div class="page-title " style="background-color: #D3D3D3;">
       <div class="heading">
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
@@ -250,7 +250,7 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 

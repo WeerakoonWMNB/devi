@@ -201,37 +201,100 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+<section id="hero" class="hero section">
+  <div class="container">
+    <div class="row gy-4">
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-in">
-            <h1>Welcome to Devi Balika Vidyalaya</h1>
-            <p>Nurturing Excellence, Empowering Young Women</p>
-            <div class="d-flex">
-              <a href="#about" class="btn-get-started">About</a>
-            </div>
-            <div class="our_offer col-lg-12 col-md-12 mt-4">
-                    <div class="offer_text">
-                        <h4>Days to තාල 2025</h4>
-                        <div class="date_countdown">
-                            <div id="timer">
-                                <div id="days" class="date"></div>
-                                <div id="hours" class="date"></div>
-                                <div id="minutes" class="date"></div>
-                                <div id="seconds" class="date"></div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Left Column: Cards -->
+      <div class="col-lg-6 d-flex flex-column justify-content-between" data-aos="fade-up" data-aos-delay="200">
+        <div class="row gy-3">
+
+          <!-- School Theme Song Card (Full Width) -->
+          <div class="col-12">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body p-3">
+                <h5 class="card-title">School Theme Song</h5>
+                <div class="video-wrapper position-relative" style="height: 200px; overflow: hidden;">
+                  <img src="assets/img/about.jpg" class="img-fluid w-100" alt="school video" style="object-fit: cover; width: 100%;">
+                  <a href="assets/img/video/theme-song.mp4" class="glightbox pulsating-play-btn"></a>
                 </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+
+          <!-- School Motto and Song Cards -->
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body p-3">
+                <h5 class="card-title">School Motto</h5>
+                <p class="card-text">
+                  “Manasa Sanvuta Dheera” <br>
+                  <small>(Great are those who are serene in mind)</small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body p-3">
+                <h5 class="card-title">School Song</h5>
+                <audio controls style="width: 100%;">
+                  <source src="assets/img/audio/School-Song.mpeg" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Carousel in Card -->
+      <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-in">
+        <div class="card h-100 shadow-sm p-3">
+          <div id="heroCarousel" class="carousel slide carousel-fade rounded" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/crousel/1.JPG" class="img-fluid rounded" alt="carousel image1">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/crousel/2.JPG" class="img-fluid rounded" alt="carousel image2">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/crousel/3.JPG" class="img-fluid rounded" alt="carousel image3">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/crousel/4.jpg" class="img-fluid rounded" alt="carousel image4">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/crousel/5.JPG" class="img-fluid rounded" alt="carousel image5">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/crousel/6.JPG" class="img-fluid rounded" alt="carousel image6">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/crousel/7.JPG" class="img-fluid rounded" alt="carousel image7">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bi "></span>
+            </a>
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon bi "></span>
+            </a>
           </div>
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </div>
+  </div>
+</section>
+<!-- /Hero Section -->
+
+
+
+
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -240,7 +303,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-6 position-relative order-last content" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="col-lg-6 position-relative order-last content" data-aos="fade-up" data-aos-delay="200">
             
               <div class="row mb-4">
                 <div class="col-md-6 mt-3">
@@ -269,9 +332,9 @@
             </div>
 
             
-          </div>
+          </div> -->
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 content" data-aos="fade-up" data-aos-delay="100">
             <h3>About Us</h3>
             <p>
               Established in January 15th 1953, Devi Balika Vidyalaya stands as a premier national school for girls in Colombo, Sri Lanka. With a steadfast commitment to academic excellence and holistic development, we cultivate a nurturing environment that empowers young women to become compassionate leaders and innovators in society.
@@ -387,7 +450,7 @@
 
         <div class="row gy-4  features-item">
           <div class="col-md-5 d-flex" data-aos="zoom-out" data-aos-delay="100">
-            <img src="assets/img/principal.jpg" class="img-fluid" alt="principal's image">
+            <img src="assets/img/madam.jpeg" class="img-fluid" alt="principal's image">
           </div>
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
             <!-- <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3> -->
@@ -1379,45 +1442,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    //------- makeTimer js --------//  
-  function makeTimer() {
-
-    //		var endTime = new Date("29 April 2018 9:56:00 GMT+01:00");	
-    var endTime = new Date("27 Sep 2025 12:56:00 GMT+01:00");
-    endTime = (Date.parse(endTime) / 1000);
-
-    var now = new Date();
-    now = (Date.parse(now) / 1000);
-
-    var timeLeft = endTime - now;
-
-    var days = Math.floor(timeLeft / 86400);
-    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
-    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
-
-    if (hours < "10") {
-      hours = "0" + hours;
-    }
-    if (minutes < "10") {
-      minutes = "0" + minutes;
-    }
-    if (seconds < "10") {
-      seconds = "0" + seconds;
-    }
-
-    $("#days").html("<span>Days</span>" + days);
-    $("#hours").html("<span>Hours</span>" + hours);
-    $("#minutes").html("<span>Minutes</span>" + minutes);
-    $("#seconds").html("<span>Seconds</span>" + seconds);
-
-  }
-
-    setInterval(function () {
-      makeTimer();
-    }, 1000);
-  </script>
+  
 
 </body>
 

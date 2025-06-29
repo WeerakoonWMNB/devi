@@ -1,4 +1,4 @@
-<footer id="footer" class="footer dark-background">
+<footer id="footer" class="footer" style="background-color: #C0C0C0;">
     <div class="container">
       <h3 class="sitename">DEVI BALIKA VIDYALAYA</h3>
       <p>“Manasa Sanvuta Dheera” <br>
