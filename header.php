@@ -40,7 +40,7 @@
       </nav>
 
       <a class="btn-getstarted" href="#">
-        තාල 
+        භාව 
         <div class="date_countdown">
             <div id="timer">
                 <div id="days" class="date"></div>

@@ -404,10 +404,10 @@
         ?>
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="img">
+              <div class="img" style="height: 300px; overflow: hidden;">
                 <img src="<?php echo $image; ?>" class="img-fluid" alt="<?php echo $title; ?>">
               </div>
-              <div class="details position-relative">
+              <div class="details position-relative" style="min-height: 300px;">
                 <div class="icon">
                   <i class="bi bi-activity"></i>
                 </div>
