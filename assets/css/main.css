@@ -1,15 +1,3 @@
-/**
-* Template Name: Bocor
-* Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -22,7 +10,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #213b52; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #fdc134; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #8d0e0e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +18,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #e7f4ff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #fdc134; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #f6f5f5; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #fdc134; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #8d200e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -49,7 +37,7 @@
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #315575;
-  --contrast-color: #223b51;
+  --contrast-color: #f6f9fb;
 }
 
 /* Smooth scroll */
@@ -89,15 +77,26 @@ h6 {
 
 /* Pulsating Play Button
 ------------------------------*/
+.video-wrapper {
+  position: relative;
+  display: inline-block; /* Ensures the wrapper sizes to the image */
+}
+
 .pulsating-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 94px;
   height: 94px;
   background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
   border-radius: 50%;
   display: block;
-  position: relative;
   overflow: hidden;
+  z-index: 10;
+  cursor: pointer;
 }
+
 
 .pulsating-play-btn:before {
   content: "";
@@ -153,6 +152,8 @@ h6 {
   border-left: 15px solid var(--accent-color);
   transform: scale(20);
 }
+
+
 
 @keyframes pulsate-play-btn {
   0% {
@@ -237,7 +238,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 60px;
   margin-right: 8px;
 }
 
@@ -262,7 +263,7 @@ h6 {
   margin: 0 0 0 30px;
   border-radius: 50px;
   transition: 0.3s;
-  border: 2px solid var(--accent-color);
+  border: 2px solid #C0C0C0;
 }
 
 .header .btn-getstarted:hover,
@@ -285,6 +286,13 @@ h6 {
   .header .navmenu {
     order: 3;
   }
+}
+
+@media (max-width: 426px) {
+  .header .logo img {
+  max-height: 100px;
+  margin-right: 8px;
+}
 }
 
 /* Global Header on Scroll
@@ -960,11 +968,7 @@ section,
   margin-bottom: 0;
 }
 
-.about .pulsating-play-btn {
-  position: absolute;
-  left: calc(50% - 47px);
-  top: calc(50% - 47px);
-}
+
 
 /*--------------------------------------------------------------
 # Featured Services Section
