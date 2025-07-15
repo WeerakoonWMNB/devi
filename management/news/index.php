@@ -19,10 +19,12 @@ while ($row = $res->fetch_assoc()):
         <?php endif; ?>
   <td><?= htmlspecialchars($row['expire_date']) ?></td>
   <td><?= $row['created_date'] ?></td>
-  <td>
-    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
-    <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Delete?')">Delete</a>
+  <td style="white-space: nowrap;">
+    <a href="edit.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm me-1 d-inline-block">Edit</a>
+    <a href="delete.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm d-inline-block" onclick="return confirm('Delete?')">Delete</a>
   </td>
+
+
 </tr>
 <?php endwhile; ?>
 </table>

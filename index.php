@@ -192,6 +192,12 @@
 }
 
   </style>
+
+  <style>
+    .blurred-text {
+      filter: blur(2px); /* You can adjust the px value */
+    }
+  </style>
 </head>
 
 <body class="index-page">
