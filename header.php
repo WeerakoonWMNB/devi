@@ -1,4 +1,9 @@
 <header id="header" class="header d-flex align-items-center fixed-top" style ="background-color: #800000;">
+  <style>
+    .blurred-text {
+      filter: blur(2px); /* You can adjust the px value */
+    }
+  </style>
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.php" class="logo d-flex align-items-center me-auto">
@@ -53,6 +58,7 @@
 
     </div>
   </header>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     //------- makeTimer js --------//  
   function makeTimer() {
